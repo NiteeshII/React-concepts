@@ -4,6 +4,8 @@ import useUpdateLogger from "../CustomHooks/useUpdateLogger";
 import useToggle from "../CustomHooks/useToggle";
 import Usememo from "./useMemo";
 import Usetransition from "./useTransition";
+import UseCallback from "./useCallback";
+import UseReducer from "./useReducer";
 
 const Input = () => {
   const [name, setName] = useLocalStorage("name", "");
@@ -27,8 +29,10 @@ const Input = () => {
         <button onClick={() => toggleValue(true)}>Make True</button>
         <button onClick={() => toggleValue(false)}>Make False</button>
       </div>
-      <Usememo />
-      <Usetransition />
+      {/* <Usememo />
+      <Usetransition /> */}
+      <UseCallback />
+      <UseReducer />
     </div>
   );
 };
